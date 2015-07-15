@@ -132,9 +132,10 @@
 
 .button
 {
-	position:absolute;
-	bottom:11%;
-	left: 16%;
+	display: inline;
+	position:relative;
+	bottom:3%;
+	left: 12%;
 	z-index: 2;
 	text-align: center;
 	padding:2%;
@@ -143,11 +144,14 @@
 
 .button a
 {
-	padding: 2em 3em;
-	background-color:#55A100;
+	background-color:#56A201;
 	color:white;
 	text-decoration:none;
 	font-family: "arial";
+	font-size: 150%;
+	font-weight: bold;
+	border-radius: 5px;
+	padding: 2% 3%;
 }
 
 
