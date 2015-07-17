@@ -25,14 +25,14 @@
 
 
 
-		<h1>Subscription Form<h1>
+		<h1>Subscription Form</h1>
 
 		<table>
 		<tr>
 			<td>Name</td>
 			<td><input type="text" id="name" required/></td>
 			<td>Country</td>
-			<td><select id="country">
+			<td><select id="country" onchange="myfunc1()">
 				<option value=""></option>
 				<option value="Afganistan">Afghanistan</option>
 				<option value="Albania">Albania</option>
@@ -285,20 +285,44 @@
 			</tr>
 			<tr>
 				<td>Email</td>
-				<td><input type="email" id="email"></td>
-				<td>Address</td>
-				<td rowspan="4"><textarea rows="4" cols="23" class="none" id="address"></textarea></td>
+				<td><input type="email" id="email"/></td>
+				<td>State</td>
+				<td><select id="state" disabled/>
+				
+				</select>
+
+				</td>
 			</tr>
+				<tr>
+				<td>Phone Number:</td>
+				<td><input id ="ph" type="text" maxlength="10" onchange="myfunc3()" onblur="myfunc4()"/></td>
+				<td>Address</td>
+				<td rowspan="4"><textarea rows="4" cols="16" class="none" id="address" contenteditable="true" spellcheck="true"></textarea></td>
+			</tr>
+			
+			
 			<tr>
 				<td>Sex</td>
-				<td><input type="radio" id="sex" value="male">Male
-				<input type="radio" id="sex" value="female">Female</td
+				<td><input type="radio" id="sex" value="male"/>Male
+				<input type="radio" id="sex" value="female"/>Female</td
 			</tr>
 			<tr>
 				<td>Interest</td>
-				<td><input type="checkbox" id="football" value="football">Football
-				<input type="checkbox" id="movie" value="movie">Movie
-				<input type="checkbox" id="reading" value="reading">Reading</td>
+				<td><input type="checkbox" id="games" value="games" onclick="myfunc5()"/>
+						<dialog id="myDialog1"><input type="checkbox" id="soccer" value="soccer"/>Soccer
+						<input type="checkbox" id="cricket" value="cricket"/>Cricket
+						<input type="checkbox" id="hockey" value="hockey"/>Hockey
+						<br/>Press Esc when done</dialog>Games
+					<input type="checkbox" id="movie" value="movie" onclick="myfunc6()"/>
+						<dialog id="myDialog2"><input type="checkbox" id="action" value="action"/>Action
+						<input type="checkbox" id="horror" value="horror"/>Horror
+						<input type="checkbox" id="comedy" value="comedy"/>Comedy
+						<br/>Press Esc when done</dialog>Movie
+					<input type="checkbox" id="reading" value="reading" onclick="myfunc7()"/>
+						<dialog id="myDialog3"><input type="checkbox" id="romance" value="romance"/>Romance
+						<input type="checkbox" id="detective" value="detective"/>Detective
+						<input type="checkbox" id="adventure" value="adventure"/>Adventure
+						<br/>Press Esc when done</dialog>Reading</td>
 			</table>
 		<input type="reset" class="mybutton1"  value="RESET"></input>
 		<input type="submit" class="mybutton2" onclick="myfunc()" value="SUBMIT"></input>
@@ -313,33 +337,7 @@
 	</div>
 
 
-<script>
-	function myfunc(){
-		var x=[];
-		var y,z,w;
-		w=document.getElementById("football").checked;
-		y=document.getElementById("movie").checked;
-		z=document.getElementById("reading").checked;
-		if(w)
-			x.push(document.getElementById("football").value);
-		if(y)
-			x.push(document.getElementById("movie").value);
-		if(z)
-			x.push(document.getElementById("reading").value);
-		var obj={
-			"name":document.getElementById("name").value,
-			"email":document.getElementById("email").value,
-			"sex":document.getElementById("sex").value,
-			"interests": x,
-			"country":document.getElementById("country").value,
-			"address":document.getElementById("address").value,
-		};
-		
-
-		console.log(JSON.stringify(obj));
-
-	}
-</script>
+<script type="text/javascript" src="func.js"></script>
 
 
 </body>
