@@ -1,4 +1,4 @@
-<!DOCTYPE html">
+<!DOCTYPE html>
 <html>
 <head>
 	<title>JS1</title>
@@ -29,12 +29,16 @@
 
 var k=[];
 l=0;
-
+	
+	
 	
 function f1()
 	{
-		//var w=document.getElementsByClassName("a");
-		//w.body.removeChild(w);
+		var w=document.getElementsByClassName("a");
+		if(w.length>0)
+			for(var q=0;q<20;q++){
+			w[0].parentNode.removeChild(w[0]);
+		}
 for(var j=0;j<20;j++)
 		
 {
@@ -131,6 +135,7 @@ newElement.style.width="60px";
 newElement.style.marginTop="10px";
 			
 newElement.style.marginLeft="10px";
+newElement.style.border="2px solid blue";			
 			
 newElement.name=a[0]+a[1];
 			
@@ -179,10 +184,16 @@ if(!x.value)
 x.style.border="0px";
 }
 
-function sub(){}
 
 function sub()
 {
+
+
+		var w=document.getElementsByClassName("a");
+		if(w.length>0)
+			for(var q=0;q<20;q++){
+			w[0].parentNode.removeChild(w[0]);
+}
 for(var j=0;j<20;j++)
 		
 {
@@ -192,7 +203,7 @@ var a=[];
 var newElement=document.createElement("div");
 			
 newElement.style.width="150px";
-			
+newElement.className="a";			
 newElement.style.height="150px";
 			
 newElement.style.float="left";
