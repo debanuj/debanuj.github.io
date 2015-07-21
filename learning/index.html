@@ -1,0 +1,312 @@
+<!DOCTYPE html">
+<html>
+<head>
+	<title>JS1</title>
+
+<style type="text/css">
+	
+
+#bod{
+	width: 50px;
+	height: 50%;
+}
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+<div>
+<input type="button" onclick="f1()" value="ADDITION"/><input type="button" onclick="sub()" value="SUBTRACTION"/>
+</div>
+
+
+
+
+<script>
+
+var k=[];
+l=0;
+
+	
+function f1()
+	{
+		//var w=document.getElementsByClassName("a");
+		//w.body.removeChild(w);
+for(var j=0;j<20;j++)
+		
+{
+			
+var a=[];
+			
+var newElement=document.createElement("div");
+			
+newElement.style.width="150px";
+newElement.className="a";			
+newElement.style.height="150px";
+			
+newElement.style.float="left";
+			
+newElement.style.position="relative";
+			
+newElement.style.marginTop="50px";
+			
+newElement.style.marginLeft="100px";
+			
+k[l]=l+"";
+			
+newElement.id=k[l];
+
+newElement.className="a";		
+document.body.appendChild(newElement);
+			
+			
+for(var i=0;i<2;i++)
+			
+{
+				
+a[i]=Math.round(Math.random()*100);
+					
+if(a[i]<10)
+					
+a[i]+=10;
+			
+
+				
+newElement=document.createElement("div");
+				
+newElement.style.position="relative";
+				
+newElement.style.marginTop="10px";
+		
+				
+if(i==0)
+				
+{
+					
+newElement.innerHTML=a[i];
+					
+newElement.style.marginLeft="55px";
+					
+newElement.style.width="25px";
+					
+newElement.style.marginRight="0px";
+				
+}
+				
+else
+				
+{	
+				
+newElement.innerHTML="+"+a[i];
+				
+newElement.style.marginTop="10px";
+				
+newElement.style.marginLeft="46px";
+				
+newElement.style.width="25px";
+				
+newElement.style.marginRight="0px";
+				
+}
+			
+document.getElementById(k[l]).appendChild(newElement);
+			
+}
+			
+var newElement=document.createElement("input");
+			
+newElement.style.position="relative";
+			
+newElement.style.float="left";
+			
+newElement.display="span";
+			
+newElement.type="text";
+			
+newElement.style.width="60px";
+			
+newElement.style.marginTop="10px";
+			
+newElement.style.marginLeft="10px";
+			
+newElement.name=a[0]+a[1];
+			
+newElement.id=l+""+l;
+	
+newElement.className="b";		
+newElement.onkeyup=function(){f3(this);f2(this);};
+newElement.onblur=function(){f4(this)};
+
+newElement.dir="rtl";			
+document.getElementById(k[l]).appendChild(newElement);
+			
+console.log(a[0],a[1]);
+			
+l++;
+		
+}
+	
+}
+
+
+	
+function f2(x)
+	
+{				
+if(x.value.localeCompare(x.name))
+			
+x.style.border="2px solid red";
+
+else
+x.style.border="2px solid green";
+			
+}
+
+
+
+function f3(x)
+{
+//var n=x.value.length;
+x.setSelectionRange(0,0);
+}
+
+function f4(x)
+{
+if(!x.value)
+x.style.border="0px";
+}
+
+function sub(){}
+/*
+function sub()
+{
+for(var j=0;j<20;j++)
+		
+{
+			
+var a=[];
+			
+var newElement=document.createElement("div");
+			
+newElement.style.width="150px";
+			
+newElement.style.height="150px";
+			
+newElement.style.float="left";
+			
+newElement.style.position="relative";
+			
+newElement.style.marginTop="50px";
+			
+newElement.style.marginLeft="100px";
+			
+k[l]=l+"";
+			
+newElement.id=k[l];
+
+newElement.className="a";		
+document.body.appendChild(newElement);
+			
+			
+for(var i=0;i<2;i++)
+			
+{
+				
+a[i]=Math.round(Math.random()*100);
+					
+if(a[i]<10)
+					
+a[i]+=10;
+			
+
+				
+newElement=document.createElement("div");
+				
+newElement.style.position="relative";
+				
+newElement.style.marginTop="10px";
+		
+				
+if(i==0)
+				
+{
+					
+newElement.innerHTML=a[i];
+					
+newElement.style.marginLeft="55px";
+					
+newElement.style.width="25px";
+					
+newElement.style.marginRight="0px";
+				
+}
+				
+else
+				
+{
+	
+				
+newElement.innerHTML="-"+a[i];
+				
+newElement.style.marginTop="10px";
+				
+newElement.style.marginLeft="46px";
+				
+newElement.style.width="25px";
+				
+newElement.style.marginRight="0px";
+				
+}
+			
+document.getElementById(k[l]).appendChild(newElement);
+			
+}
+			
+var newElement=document.createElement("input");
+			
+newElement.style.position="relative";
+			
+newElement.style.float="left";
+newElement.style.border="2px solid blue";			
+newElement.display="span";
+			
+newElement.type="text";
+			
+newElement.style.width="60px";
+			
+newElement.style.marginTop="10px";
+			
+newElement.style.marginLeft="10px";
+if(a[0]>a[1])			
+newElement.name=a[0]-a[1];
+else
+newElement.name=a[1]-a[0];			
+newElement.id=l+""+l;
+	
+newElement.className="b";		
+newElement.onkeyup=function(){f3(this);f2(this);};
+newElement.onblur=function(){f4(this)};
+
+newElement.dir="rtl";			
+document.getElementById(k[l]).appendChild(newElement);
+			
+console.log(a[0],a[1]);
+			
+l++;
+		
+}
+	
+}
+
+*/
+
+</script>
+
+</body>
+</html>
