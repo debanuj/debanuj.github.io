@@ -1,19 +1,9 @@
-<!DOCTYPE html">
+<!DOCTYPE html>
 <html>
 <head>
 	<title>JS1</title>
 
 <style type="text/css">
-	
-
-#bod{
-	width: 50px;
-	height: 50%;
-}
-
-
-
-
 
 
 </style>
@@ -32,14 +22,16 @@
 
 var k=[];
 l=0;
-
 	
 function f1()
 	{
-		//var w=document.getElementsByClassName("a");
-		//w.body.removeChild(w);
-for(var j=0;j<20;j++)
-		
+		var w=document.getElementsByClassName("a");
+		if(w.length>0)
+			for(var q=0;q<20;q++){
+			w[0].parentNode.removeChild(w[0]);
+	}
+
+for(var j=0;j<20;j++)	
 {
 			
 var a=[];
@@ -134,13 +126,14 @@ newElement.style.width="60px";
 newElement.style.marginTop="10px";
 			
 newElement.style.marginLeft="10px";
+newElement.style.border="2px solid blue";			
 			
 newElement.name=a[0]+a[1];
 			
 newElement.id=l+""+l;
 	
 newElement.className="b";		
-newElement.onkeyup=function(){f3(this);f2(this);};
+newElement.onkeyup=function(){f2(this);};
 newElement.onblur=function(){f4(this)};
 
 newElement.dir="rtl";			
@@ -169,23 +162,22 @@ x.style.border="2px solid green";
 }
 
 
-
-function f3(x)
-{
-//var n=x.value.length;
-x.setSelectionRange(0,0);
-}
-
 function f4(x)
 {
 if(!x.value)
-x.style.border="0px";
+x.style.border="2px solid blue";
 }
 
-function sub(){}
-/*
+
 function sub()
 {
+
+
+		var w=document.getElementsByClassName("a");
+		if(w.length>0)
+			for(var q=0;q<20;q++){
+			w[0].parentNode.removeChild(w[0]);
+}
 for(var j=0;j<20;j++)
 		
 {
@@ -195,7 +187,7 @@ var a=[];
 var newElement=document.createElement("div");
 			
 newElement.style.width="150px";
-			
+newElement.className="a";			
 newElement.style.height="150px";
 			
 newElement.style.float="left";
@@ -288,9 +280,8 @@ newElement.name=a[0]-a[1];
 else
 newElement.name=a[1]-a[0];			
 newElement.id=l+""+l;
-	
 newElement.className="b";		
-newElement.onkeyup=function(){f3(this);f2(this);};
+newElement.onkeyup=function(){f2(this);};
 newElement.onblur=function(){f4(this)};
 
 newElement.dir="rtl";			
@@ -304,7 +295,6 @@ l++;
 	
 }
 
-*/
 
 </script>
 
