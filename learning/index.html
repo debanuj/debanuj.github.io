@@ -418,7 +418,8 @@ function f3()
 			document.getElementById('dis').value=Number(x)%Number(document.getElementById("dis").value);
 			rr=0;
 		}
-		d=0;
+
+
 		c=2;		
 	}
 		
@@ -470,10 +471,7 @@ function f3()
 		y=0;
 			
 		pe=0;
-
-		d=0;
-		c=2;
-		d=0;		
+		c=2;		
 	}
 		
 	else
@@ -487,11 +485,18 @@ function f3()
 		pe=0;
 			
 		y=0;
-
-		d=0;		
+		
 	}
 
-		
+	console.log(document.getElementById('dis').value.search("."));
+
+	if(document.getElementById('dis').value.indexOf("."))
+		{
+			d=1;
+			console.log(d);
+		}
+		else
+			d=0;	
 }
 
 function f4(d)
