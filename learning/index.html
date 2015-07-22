@@ -15,9 +15,10 @@ width: 400px;
 		
 border: 2px solid black;
 		
-left: 20%;
+left: 30%;
 		
 top:10%;
+background-color: #E6E6E6;
 	
 }
 	
@@ -34,12 +35,13 @@ top: 20px;
 		
 left: 4%;
 		
-border: 2px solid black;
+border: 2px solid #006600;
 		
 direction:rtl;
 		
 font-size: 30px;
-	
+
+background-color: #66FF66;	
 }
 	
 
@@ -62,10 +64,24 @@ display: inline-block;
 border: 2px solid black;
 		
 font-size: 25px;
-	
+color: #1A0000;
+background-color: #B2B2B2;	
 }
 
+.fk{
+	background-color: #000066;
+	color: #99CCFF;
+	border: 2px solid #000066;
+}
 
+.op{
+	background-color: #CC0000;
+	color: #FFFFFF;
+	border: 2px solid #4C0000;
+}
+.eq{
+	background-color: #FF9900;
+}
 
 </style>
 
@@ -80,32 +96,33 @@ font-size: 25px;
 		
 <input type="text" class="disp" id="dis" placeholder="0"/>
 		
-<input type="button" value="MC" class="butn" id="mc" onclick="mc1()" /><input type="button" value="M+" id="mp" class="butn" onclick="mp1()" /><input type="button" value="M-" class="butn" id="mm" onclick="mm1()" /><input type="button" value="MR" class="butn" id="mr" onclick="mr1()" />
+<input type="button" value="MC" class="butn fk" id="mc" onclick="mc1()" onmouseover="f4(this)" onmouseout="f5(this)"/><input type="button" value="M+" id="mp" class="butn fk" onclick="mp1()" onmouseover="f4(this)" onmouseout="f5(this)"/><input type="button" value="M-" class="butn fk" id="mm" onclick="mm1()" onmouseover="f4(this)" onmouseout="f5(this)"/><input type="button" value="MR" class="butn fk" id="mr" onclick="mr1()" onmouseover="f4(this)" onmouseout="f5(this)" />
 		
 
-<input type="button" value="CLS" class="butn" id="cls" onclick="cl()"/><input type="button" value="CAN" class="butn" id="can" onclick="cn()"/><input type="button" value="REM" class="butn" id="rem" onclick="re()"/><input type="button" value="%" class="butn" id="per" onclick="per()" />
+<input type="button" value="CLS" class="butn fk" id="cls" onclick="cl()" onmouseover="f4(this)" onmouseout="f5(this)"/><input type="button" value="CAN" class="butn fk" id="can" onclick="cn()" onmouseover="f4(this)" onmouseout="f5(this)"/><input type="button" value="REM" class="butn fk" id="rem" onclick="re()" onmouseover="f4(this)" onmouseout="f5(this)"/><input type="button" value="%" class="butn op" id="per" onclick="per()" onmouseover="f6(this)" onmouseout="f7(this)"/>
 
-
-		
-
-<input type="button" value="7" class="butn" id="seven" onmousedown="f2()" onmouseup="f1(this.value)" /><input type="button" value="8" class="butn" id="eight"  onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="9" class="butn" id="nine"  onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="+" class="butn" id="plu" onclick="ad()"/>
 
 		
 
-<input type="button" value="4" class="butn" id="four" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="5" class="butn" id="five" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="6" class="butn" id="six" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="-" class="butn" id="min" onclick="su()"/>
+<input type="button" value="7" class="butn" id="seven" onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="8" class="butn" id="eight"  onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="9" class="butn" id="nine"  onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="+" class="butn op" id="plu" onclick="ad()" onmouseover="f6(this)" onmouseout="f7(this)"/>
 
 		
 
-<input type="button" value="1" class="butn" id="one" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="2" class="butn" id="two" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="3" class="butn" id="three" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="x" class="butn" id="mul" onclick="mu()"/>
+<input type="button" value="4" class="butn" id="four" onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="5" class="butn" id="five" onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="6" class="butn" id="six" onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="-" class="butn op" id="min" onclick="su()" onmouseover="f6(this)" onmouseout="f7(this)"/>
 
 		
 
-<input type="button" value="." class="butn" id="dot" onmouseup="dt(this.value)" /><input type="button" value="0" class="butn" id="zero" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="=" class="butn" id="eq" onclick="f3()" /><input type="button" value="/" class="butn" id="div" onclick="di()"/>
+<input type="button" value="1" class="butn" id="one" onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="2" class="butn" id="two" onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="3" class="butn" id="three" onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="x" class="butn op" id="mul" onclick="mu()" onmouseover="f6(this)" onmouseout="f7(this)"/>
+
+		
+
+<input type="button" value="." class="butn" id="dot" onmouseup="dt(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="0" class="butn" id="zero" onmousedown="f2()" onmouseup="f1(this.value)" onmouseover="f8(this)" onmouseout="f9(this)"/><input type="button" value="=" class="butn eq" id="eq" onclick="f3()" onmouseover="f10(this)" onmouseout="f11(this)"/><input type="button" value="/" class="butn op" id="div" onclick="di()" onmouseover="f6(this)" onmouseout="f7(this)"/>
 
 </div>
 
 
-
+<p> To view result, press equals button</p>
+<p>To change operator, press cancel and insert new operand</p>
 
 
 <script>
@@ -477,7 +494,42 @@ function f3()
 		
 }
 
-
+function f4(d)
+{
+	d.style.backgroundColor= "#0000FF";
+	d.style.color= "#99CCFF";
+}
+function f5(d)
+{
+	d.style.backgroundColor= "#000066";
+	d.style.color= "#99CCFF";
+}
+function f6(d)
+{
+	d.style.backgroundColor= "#FF3333";
+	d.style.border="solid #FF0000";
+}
+function f7(d)
+{
+	d.style.backgroundColor= "#CC0000";
+	d.style.border="solid #4C0000";
+}
+function f8(d)
+{
+	d.style.backgroundColor="#E6E6E6";
+}
+function f9(d)
+{
+	d.style.backgroundColor="#B2B2B2";
+}
+function f10(d)
+{
+	d.style.backgroundColor="#FFFF66";
+}
+function f11(d)
+{
+	d.style.backgroundColor="#FF9900";
+}
 </script>
 </body>
 </html>
