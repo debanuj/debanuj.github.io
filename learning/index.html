@@ -1,0 +1,478 @@
+<!DOCTYPE <!DOCTYPE html>
+
+<html>
+<head>
+	<title>calc</title>
+<style>
+	
+.main{
+		
+position: relative;
+		
+height:500px;
+		
+width: 400px;
+		
+border: 2px solid black;
+		
+left: 20%;
+		
+top:10%;
+	
+}
+	
+
+.disp{
+		
+position: absolute;
+		
+height: 40px;
+		
+width: 92%;
+		
+top: 20px;
+		
+left: 4%;
+		
+border: 2px solid black;
+		
+direction:rtl;
+		
+font-size: 30px;
+	
+}
+	
+
+.butn{
+		
+top: 15%;
+		
+margin-top: 4%;
+		
+margin-left: 4%;
+		
+height: 10%;
+		
+width: 20%;
+		
+position: relative;
+		
+display: inline-block;
+		
+border: 2px solid black;
+		
+font-size: 25px;
+	
+}
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="main">
+		
+<input type="text" class="disp" id="dis" placeholder="0"/>
+		
+<input type="button" value="MC" class="butn" id="mc" onclick="mc1()" /><input type="button" value="M+" id="mp" class="butn" onclick="mp1()" /><input type="button" value="M-" class="butn" id="mm" onclick="mm1()" /><input type="button" value="MR" class="butn" id="mr" onclick="mr1()" />
+		
+
+<input type="button" value="CLS" class="butn" id="cls" onclick="cl()"/><input type="button" value="CAN" class="butn" id="can" onclick="cn()"/><input type="button" value="REM" class="butn" id="rem" onclick="re()"/><input type="button" value="%" class="butn" id="per" onclick="per()" />
+
+
+		
+
+<input type="button" value="7" class="butn" id="seven" onmousedown="f2()" onmouseup="f1(this.value)" /><input type="button" value="8" class="butn" id="eight"  onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="9" class="butn" id="nine"  onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="+" class="butn" id="plu" onclick="ad()"/>
+
+		
+
+<input type="button" value="4" class="butn" id="four" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="5" class="butn" id="five" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="6" class="butn" id="six" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="-" class="butn" id="min" onclick="su()"/>
+
+		
+
+<input type="button" value="1" class="butn" id="one" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="2" class="butn" id="two" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="3" class="butn" id="three" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="x" class="butn" id="mul" onclick="mu()"/>
+
+		
+
+<input type="button" value="." class="butn" id="dot" onmouseup="dt(this.value)" /><input type="button" value="0" class="butn" id="zero" onmousedown="f2()" onmouseup="f1(this.value)"/><input type="button" value="=" class="butn" id="eq" onclick="f3()" /><input type="button" value="/" class="butn" id="div" onclick="di()"/>
+
+</div>
+
+
+
+
+
+<script>
+	
+
+var x,y,dn=0,mn=0,an=0,sn=0,c=0,pe=0,rr=0,d=0,e=1,m=0;
+
+function mc1()
+{
+	m=0;
+}
+function mp1()
+{
+	m+=document.getElementById('dis');
+}	
+
+function mm1()
+{
+	m-=document.getElementById('dis');
+}
+function mr1()
+{
+	document.getElementById('dis').value=m;
+}	
+
+function f1(b)
+	
+{
+	
+	if(e!==0)
+	{	
+		var a=document.getElementById('dis');
+		
+		a.value=a.value+b;
+
+		e++;
+	}	
+}
+				
+var a=[];
+
+	
+function di()
+	
+{
+		
+	x=document.getElementById('dis').value;
+		
+	if(c==0||c==2)
+		
+	{
+			
+		dn=1;
+			
+		c=1;
+
+		d=0;
+		e=0;		
+	}
+
+	
+}
+
+	
+
+function mu()
+	
+{
+		
+	x=document.getElementById('dis').value;
+		
+	if(c==0||c==2)
+		
+	{
+			
+		mn=1;
+			
+		c=1;
+		d=0;
+		e=0;
+		
+	}
+	
+}
+
+	
+function ad()
+	
+{
+		
+	x=document.getElementById('dis').value;
+	if(c==0||c==2)
+		
+	{
+			
+		an=1;
+			
+		c=1;
+
+		d=0;		
+		e=0;	
+	}
+	
+}
+
+	
+
+function su()
+	
+{
+		
+	x=document.getElementById('dis').value;
+		
+	if(c==0||c==2)
+		
+	{
+			
+		sn=1;
+			
+		c=1;
+		d=0; 
+		e=0;
+			
+	}
+	
+}
+
+	
+
+function per()
+	
+{
+		
+	if(c==1&&pe==0)
+		
+	{
+			
+		y=Number(document.getElementById('dis').value)*x/100;
+			
+		pe=1;
+					
+	}
+		
+	else
+ if((c==0||c==2)&&pe==0)		
+	{
+			
+		pe=2;
+			
+		c=1;
+		
+	}
+	
+}
+
+	
+
+function re()
+	
+{
+	x=document.getElementById("dis").value;
+
+	if(c==0||c==2)
+	{
+		rr=1;
+		c=1;
+		d=0;
+		e=0;		
+	}	
+}
+
+
+
+
+function dt(b)
+{
+	d++;
+	if(d==1)
+	{
+		document.getElementById("dis").value+=b+"0";
+		e=-1;
+	}
+}
+
+function cl()
+{
+	document.getElementById('dis').value="";
+	c=0;
+	x=0;
+	y=0;
+	dn=0;
+	mn=0;
+	an=0;
+	sn=0;
+	pe=0;
+	rr=0;
+	d=0;
+}
+
+function cn()
+{
+	if(e==0)
+	{
+		c=0;
+	}	
+	else
+	{
+		document.getElementById('dis').value=document.getElementById('dis').value.substr(0,document.getElementById('dis').value.length-1);
+		e--;
+	}
+}		
+
+function f2()
+	
+{
+		
+	if(e==0||c==2)
+		
+	{
+				
+		document.getElementById("dis").value="";
+
+		e++;
+		if(c==2)
+		{
+		c=0;
+		}		
+	}
+	
+if(e==-1)
+	{
+		var s=document.getElementById('dis').value;
+		var n=s.length;
+		document.getElementById('dis').value=s.substr(0,n-1);
+		e=1;
+	}			
+	
+}
+
+	
+function f3()
+{	
+	if(pe==0&&c==1)
+		
+	{
+			
+		if(an==1)
+			
+		{
+				
+			document.getElementById("dis").value=Number(x)+Number(document.getElementById("dis").value);
+					
+			an=0;
+			
+		}
+			
+		if(sn==1)
+			
+		{
+				
+			document.getElementById("dis").value=Number(x)-Number(document.getElementById("dis").value);
+					
+			sn=0;
+			
+		}
+			
+		if(dn==1)
+				
+		{
+			document.getElementById("dis").value=Number(x)/Number(document.getElementById("dis").value);
+				
+			dn=0;
+			
+		}
+			
+		if(mn==1)
+			
+		{
+				
+			document.getElementById("dis").value=Number(x)*Number(document.getElementById("dis").value);
+					
+			mn=0;
+			
+		}
+
+		if(rr==1)
+		{
+			document.getElementById('dis').value=Number(x)%Number(document.getElementById("dis").value);
+			rr=0;
+		}
+		d=0;
+		c=2;		
+	}
+		
+	else if(pe==1&&c==1)
+		
+	{
+			
+		if(an==1)
+			
+		{
+				
+			document.getElementById("dis").value=Number(x)+Number(y);
+				
+				
+			an=0;
+			
+		}
+			
+		if(sn==1)
+			
+		{
+				
+			document.getElementById("dis").value=Number(x)-Number(y);
+								
+			sn=0;
+			
+		}
+			
+		if(dn==1)
+			
+		{
+				
+			document.getElementById("dis").value=Number(x)/Number(y);
+							
+			dn=0;
+			
+		}
+			
+		if(mn==1)
+			
+		{
+				
+			document.getElementById("dis").value=Number(x)*Number(y);
+							
+			mn=0;
+			
+		}
+			
+		y=0;
+			
+		pe=0;
+
+		d=0;
+		c=2;
+		d=0;		
+	}
+		
+	else
+ if(c==1)		
+	{
+			
+		document.getElementById("dis").value=Number(document.getElementById("dis").value)/100;
+			
+		c=2;
+			
+		pe=0;
+			
+		y=0;
+
+		d=0;		
+	}
+
+		
+}
+
+
+</script>
+</body>
+</html>
