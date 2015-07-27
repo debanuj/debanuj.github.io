@@ -147,7 +147,7 @@
 		{
 			removal();
 			radio();
-			var a=["Enter the Starting Date & Time:","Enter the Closing Date & Time:","The Difference:"];
+			var a=["Enter the Starting Date & Time:","Enter the Interval:","The Future Date is:"];
 			var b="hh-mm-ss-dd-mm-yyyy";
 			var c="f_diff";
 			layout(a,b,c,1);
