@@ -13,7 +13,7 @@
 			newElement.style.marginLeft="13%";
 			newElement.style.float="left";
 			newElement.name="button";
-			newElement.style.id=i.toString();
+			newElement.id=i.toString();
 			document.body.appendChild(newElement);
 			document.getElementById(a[i]).addEventListener("click",b[i]);
 			var newElement2=document.createElement("P");
@@ -92,7 +92,7 @@
 			newElement.style.marginLeft="18%";
 			newElement.style.float="left";
 			newElement.name="dbutton";
-			newElement.style.id=i.toString();
+			newElement.id=i.toString();
 			document.getElementById("main_cont").appendChild(newElement);
 			document.getElementById(a[i]).addEventListener("click",b[i]);
 			var newElement2=document.createElement("P");
