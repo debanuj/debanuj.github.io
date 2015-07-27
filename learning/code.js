@@ -13,7 +13,7 @@
 			newElement.style.marginLeft="13%";
 			newElement.style.float="left";
 			newElement.name="button";
-			newElement.id=i.toString();
+			newElement.style.id=i.toString();
 			document.body.appendChild(newElement);
 			document.getElementById(a[i]).addEventListener("click",b[i]);
 			var newElement2=document.createElement("P");
@@ -92,7 +92,7 @@
 			newElement.style.marginLeft="18%";
 			newElement.style.float="left";
 			newElement.name="dbutton";
-			newElement.id=i.toString();
+			newElement.style.id=i.toString();
 			document.getElementById("main_cont").appendChild(newElement);
 			document.getElementById(a[i]).addEventListener("click",b[i]);
 			var newElement2=document.createElement("P");
@@ -147,7 +147,7 @@
 		{
 			removal();
 			radio();
-			var a=["Enter the Starting Date & Time:","Enter the Interval:","The Future Date is:"];
+			var a=["Enter the Starting Date & Time:","Enter the Interval:","The Future Date & Time:"];
 			var b="hh-mm-ss-dd-mm-yyyy";
 			var c="f_diff";
 			layout(a,b,c,1);
@@ -519,7 +519,7 @@ function f2()
 		
 	{
 				
-		document.getElementById("dis").value="";
+		document.getElementById("dis").value=" ";
 
 		e++;
 		if(c==2)
