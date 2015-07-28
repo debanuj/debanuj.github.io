@@ -28,7 +28,7 @@
 		}
 		var main_cont=document.createElement("div");
 		main_cont.style.height="500px";
-		main_cont.style.width="400px"
+		main_cont.style.width="400px";
 		main_cont.style.border="2px solid black";
 		main_cont.style.marginLeft="30%";
 		main_cont.style.position="absolute";
@@ -164,7 +164,7 @@
 			var txt=document.createTextNode(a[i]);
 			h.appendChild(txt);
 			document.getElementById("main_cont").appendChild(h);
-			var txt=document.createElement("input");
+			txt=document.createElement("input");
 			txt.id=c+(""+i);
 			txt.type="text";
 			txt.placeholder=b;
@@ -303,11 +303,11 @@
 			document.getElementById(a).addEventListener("click",di);
 			break;
 			case "dot":
-			document.getElementById(a).addEventListener("click",function(){dt(this.value)});
+			document.getElementById(a).addEventListener("click",function(){dt(this.value);});
 			break;
 			default:
 			document.getElementById(a).addEventListener("mousedown",f2);
-			document.getElementById(a).addEventListener("mouseup",function(){f1(this.value)});
+			document.getElementById(a).addEventListener("mouseup",function(){f1(this.value);});
 			break;
 		}
 	}
@@ -356,13 +356,13 @@ function f1(b)
 	}	
 }
 				
-var a=[];
+a=[];
 
 	
 function di()
 {
 	x=document.getElementById('dis').value;
-	if(c==0||c==2)
+	if(c===0||c==2)
 	{	
 		dn=1;
 		c=1;
@@ -376,7 +376,7 @@ function di()
 function mu()
 {
 	x=document.getElementById('dis').value;
-	if(c==0||c==2)
+	if(c===0||c==2)
 	{
 		mn=1;
 		c=1;
@@ -389,7 +389,7 @@ function mu()
 function ad()
 {
 	x=document.getElementById('dis').value;
-	if(c==0||c==2)
+	if(c===0||c==2)
 	{
 		an=1;
 		c=1;
@@ -407,7 +407,7 @@ function su()
 		
 	x=document.getElementById('dis').value;
 		
-	if(c==0||c==2)
+	if(c===0||c==2)
 		
 	{
 			
@@ -427,7 +427,7 @@ function per()
 	
 {
 		
-	if(c==1&&pe==0)
+	if(c==1&&pe===0)
 		
 	{
 			
@@ -438,7 +438,7 @@ function per()
 	}
 		
 	else
- if((c==0||c==2)&&pe==0)		
+ if((c===0||c==2)&&pe===0)		
 	{
 			
 		pe=2;
@@ -456,7 +456,7 @@ function re()
 {
 	x=document.getElementById("dis").value;
 
-	if(c==0||c==2)
+	if(c===0||c==2)
 	{
 		rr=1;
 		c=1;
@@ -476,7 +476,7 @@ function dt(b)
 		document.getElementById("dis").value+=b+"0";
 		e=-1;
 	}
-	else if(d==1&&e==0)
+	else if(d==1&&e===0)
 	{
 		document.getElementById("dis").value="0"+b+"0";
 		e=-1;
@@ -500,7 +500,7 @@ function cl()
 
 function cn()
 {
-	if(e==0)
+	if(e===0)
 	{
 		c=0;
 	}	
@@ -515,7 +515,7 @@ function f2()
 	
 {
 		
-	if(e==0||c==2)
+	if(e===0||c==2)
 		
 	{
 				
@@ -542,7 +542,7 @@ if(e==-1)
 function f3()
 {	
 
-	if(pe==0&&c==1)
+	if(pe===0&&c==1)
 		
 	{
 			
@@ -678,11 +678,11 @@ function f3()
 	{
 		if(m<0||m>12)
 			return 0;
-		if(y%400==0)	
+		if(y%400===0)	
 			day=29;
-		else if(y%100==0)
+		else if(y%100===0)
 			day=28;
-		else if(y%4==0)
+		else if(y%4===0)
 			day=29;
 		else
 			day=28;
@@ -747,14 +747,15 @@ function f3()
 		var month2=txt2arr[1];
 		var year1=txt1arr[2];
 		var year2=txt2arr[2];
+    var days_in_months=[];
 		if(validate_date(day1,month1,year1)&&validate_date(day2,month2,year2))
 		{
 			if(day2<day1)
 			{
 				if(day==28)
-					var days_in_months=[0,31,28,31,30,31,30,31,31,30,31,30,31];
+					days_in_months=[0,31,28,31,30,31,30,31,31,30,31,30,31];
 				else
-					var days_in_months=[0,31,29,31,30,31,30,31,31,30,31,30,31];
+					days_in_months=[0,31,29,31,30,31,30,31,31,30,31,30,31];
 				if(month2==1)
 				{
 					day2+=days_in_months[12];
@@ -782,11 +783,11 @@ function f3()
 			var day_diff=day2-day1;
 			var month_diff=month2-month1;
 			var year_diff=year2-year1;
-			if(day_diff==0||isNaN(day_diff))
+			if(day_diff===0||isNaN(day_diff))
 				day_diff="00";
-			if(month_diff==0||isNaN(month_diff))
+			if(month_diff===0||isNaN(month_diff))
 				month_diff="00";
-			if(year_diff==0||isNaN(year_diff))
+			if(year_diff===0||isNaN(year_diff))
 				year_diff="0000";
 			var txt3=day_diff+"d."+month_diff+"mon."+year_diff+"yrs";
 			document.getElementById("d_diff2").value=txt3;
@@ -842,11 +843,11 @@ function f3()
 			var hour_diff=hour2-hour1;
 			var minute_diff=minute2-minute1;
 			var second_diff=second2-second1;
-			if(hour_diff==0||isNaN(hour_diff))
+			if(hour_diff===0||isNaN(hour_diff))
 				hour_diff="0";
-			if(minute_diff==0||isNaN(minute_diff))
+			if(minute_diff===0||isNaN(minute_diff))
 				minute_diff="0";
-			if(second_diff==0||isNaN(second_diff))
+			if(second_diff===0||isNaN(second_diff))
 				second_diff="0";
 			var txt3=hour_diff+"hrs."+minute_diff+"mins."+second_diff+"s.";
 			document.getElementById("t_diff2").value=txt3;
@@ -881,11 +882,11 @@ function f3()
 			month_sum=month_sum%12;
 			var day_sum=day01+day02;
 			var days_in_months=[0,31,0,31,30,31,30,31,31,30,31,30,31];
-			if(year_sum%400==0)	
+			if(year_sum%400===0)	
 				days_in_months[2]=29;
-			else if(year_sum%100==0)
+			else if(year_sum%100===0)
 				days_in_months[2]=28;
-			else if(year_sum%4==0)
+			else if(year_sum%4===0)
 				days_in_months[2]=29;
 			else
 				days_in_months[2]=28;
@@ -914,19 +915,19 @@ function f3()
 			minute_sum=Math.round(minute_sum);
 			second_sum=Math.round(second_sum);
 
-			if(day_sum==0||isNaN(day_sum))
+			if(day_sum===0||isNaN(day_sum))
 				day_sum="0";
-			if(minute_sum==0||isNaN(minute_sum))
+			if(minute_sum===0||isNaN(minute_sum))
 				minute_sum="0";
-			if(second_sum==0||isNaN(second_sum))
+			if(second_sum===0||isNaN(second_sum))
 				second_sum="0";
-			if(month_sum==0||isNaN(month_sum))
+			if(month_sum===0||isNaN(month_sum))
 				month_sum="0";
-			if(hour_sum==0||isNaN(hour_sum))
+			if(hour_sum===0||isNaN(hour_sum))
 				hour_sum="0";
-			if(year_sum==0||isNaN(year_sum))
+			if(year_sum===0||isNaN(year_sum))
 				year_sum="0";
-			txt3=hour_sum.toString()+"h."+minute_sum.toString()+"min."+second_sum.toString()+"s."+day_sum.toString()+"d."+month_sum.toString()+"mon."+year_sum.toString()+"y";
+			var txt3=hour_sum.toString()+"h."+minute_sum.toString()+"min."+second_sum.toString()+"s."+day_sum.toString()+"d."+month_sum.toString()+"mon."+year_sum.toString()+"y";
 			document.getElementById("f_diff2").value=txt3;
 		}
 		else
@@ -945,14 +946,14 @@ function f3()
 		var loan=Number(document.getElementById("mort_calc0").value);
 		var time=Number(document.getElementById("mort_calc2").value);
 		var emi=Number(document.getElementById("mort_calc3").value);
-		if(loan!==0&&time!==0&&emi==0)
+		if(loan!==0&&time!==0&&emi===0)
 		{
 			temp=(1+interest);
 			temp=Math.pow(temp,time);
 			emi=Math.round((loan*interest*temp)/(temp-1));
 			document.getElementById("mort_calc3").value=emi;
 		}
-		else if(loan!==0&&time==0&&emi!==0)
+		else if(loan!==0&&time===0&&emi!==0)
 		{
 			temp=1+interest;
 			temp=Math.log(temp);
@@ -967,7 +968,7 @@ function f3()
 			else
 			document.getElementById("mort_calc2").value=time;
 		}
-		else if(loan==0&&time!==0&&emi!==0)
+		else if(loan===0&&time!==0&&emi!==0)
 		{
 			temp=1+interest;
 			temp=Math.pow(temp,time);
