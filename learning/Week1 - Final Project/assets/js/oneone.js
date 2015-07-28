@@ -1,5 +1,4 @@
 
-
 function f1()
 {
 if(!document.getElementById("name").value)
@@ -124,7 +123,5 @@ function myfunc()
 	obj.email=document.getElementById("email").value;
 	obj.message=document.getElementById("message").value;
 	console.log(JSON.stringify(obj));
-	document.forms["frm"].reset();
+	document.forms.frm.reset();
 }
-
-
