@@ -1,0 +1,336 @@
+
+<style>
+@font-face{
+font-family: fontawesome-webfont;
+src: url(assets/fonts/fontawesome-webfont.ttf);
+}
+
+body{
+font-family: fontawesome-webfont;
+color: #767676;
+}
+
+p{
+font-size:14px;
+}
+.body{
+position: absolute;
+height: 2125px;
+width: 960px;
+background-color: white;
+top: 0;
+right: 0;
+}
+
+
+
+.pic{
+position: fixed;
+top: 0;
+left: 0;
+height: 900px;
+width:500px;
+background-image:url("../../images/bg.jpg");
+background-size:800px 900px;
+}
+
+.overlay{
+position: fixed;
+top: 0;
+left: 0;
+height: 900px;
+width:470px;
+background-image:url("./../images/overlay.png");
+background-size:800px 700px;
+}
+
+.round{
+position: fixed;
+top:130px;
+left:320px;
+height:90px;
+width:90px;
+background-color:black;
+border-radius:100px;
+background-image:url("../../images/avatar.jpg");
+background-size:90px 90px;
+}
+
+.name{
+text-align:right;
+color:white;
+position:fixed;
+top:230px;
+left:230px;
+}
+
+
+h3{
+margin:0;
+}
+
+.top_text{
+position:absolute;
+top:115px;
+left:45px;
+background-color:white;
+width:630px;
+height:310px;
+}
+
+.butncont{
+position:relative;
+width:125px;
+height:25px;
+top:0px;
+text-align:center;
+}
+.butn{
+
+text-decoration:none;
+width:125px;
+height:25px;
+border:none;
+}
+
+.gallery{
+position:absolute;
+top:520px;
+left:45px;
+width:630px;
+height:1000px;
+background-color:white;
+}
+
+
+.thumbcont{
+display:inline-block;
+position:relative;
+height:300px;
+width:300px;
+
+}
+
+.thumb1{
+background-image:url("../../images/thumbs/01.png");
+background-size:100% 100%;
+}
+
+
+.thumb2{
+background-image:url("../../images/thumbs/02.jpg");
+background-size:100% 100%;
+}
+
+.thumb3{
+background-image:url("../../images/thumbs/03.jpg");
+background-size:100% 100%;
+}
+
+.thumb4{
+background-image:url("../../images/thumbs/04.jpg");
+background-size:100% 100%;
+}
+
+.thumb5{
+background-image:url("../../images/thumbs/05.jpg");
+background-size:100% 100%;
+}
+
+.thumb6{
+background-image:url("../../images/thumbs/06.jpg");
+background-size:100% 100%;
+}
+
+
+.r{
+float:right;
+}
+
+hr{
+
+position:relative;
+color:#F7F7F7;
+top:85px;
+}
+
+.thumbs{
+display:inline-block;
+position:relative;
+width:300px;
+height:200px;
+background-color:black;
+}
+
+h5{
+margin-top:16px;
+margin-bottom:5px;
+}
+
+p.t{
+width:300px;
+}
+
+.info{
+position:absolute;
+top:1700px;
+left:45px;
+width:630px;
+height:400px;
+background-color:white;
+}
+
+.table{
+position:relative;
+top:10px;
+width:400px;
+height:170px;
+}
+
+.fields{
+display:inline-block;
+position:relative;
+width:190px;
+height:35px;
+background-color:#F7F7F7;
+border:none;
+}
+
+.msg{
+background-color:#F7F7F7;
+top:20px;
+width:400px;
+height:105px;
+border:none;
+}
+
+.padding{
+padding:3px;
+}
+
+.contact{
+position:absolute;
+left:430px;
+top:125px;
+width:180px;
+height:150px;
+background-color:white;
+}
+
+.icons{
+display:inline-block;
+position:relative;
+width:20px;
+height:20px;
+background-image: url(../../images/icon1.jpg);
+background-size: 20px 20px;
+background-repeat: no-repeat;
+margin-bottom:40px;
+}
+
+.icon_info{
+float:right;
+position:relative;
+display:inline;
+width:150px;
+height:40px;
+background-color:white;
+}
+
+.icon2{
+margin-top:20px;
+background-image: url(../../images/icon2.jpg);
+background-size: 20px 20px;
+background-repeat: no-repeat;
+}
+
+.icon3{
+margin-top:-25px;
+background-image: url(../../images/icon3.jpg);
+background-size: 20px 20px;
+background-repeat: no-repeat;
+}
+
+.lastbtn{
+top:50px;
+}
+
+.wrap{
+position:fixed;
+top:0px;
+left:0px;
+height: 100%;
+width:100%;
+background-image:url("../../images/overlay.png");
+z-index:-1;
+}
+
+.img_cont{
+position:absolute;
+width:50%;
+height:60%;
+left:25%;
+top:20%;
+z-index:-1;
+}
+
+.img_but{
+display:inline-block;
+position:relative;
+width:10%;
+height:20%;
+top:40%;
+//background-image:url("../../images/overlay.png");
+z-index:-1;
+}
+
+.img_cross{
+position:relative;
+width:8%;
+height:15%;
+padding-bottom:2%;
+top:0%;
+right:-10%;
+text-align:center;
+//background-image:url("../../images/overlay.png");
+z-index:-1;
+}
+
+.inv_but{
+font-size:20px;
+text-align:center;
+font-weight:bold;
+padding:3%;
+color:white;
+z-index:-1;
+}
+
+.hover{
+position:absolute;
+left:125px;
+top:75px;
+width:50px;
+height:30px;
+border-radius:100px;
+font-weight:bold;
+text-align:center;
+invisibility:invisible;
+background-image:url("../../images/overlay.png");
+color:white;
+}
+
+.green_button{
+	color: #009961;
+	border-width: 5px;
+	border-color: #009961;
+	border-radius: 5px;
+}
+.grey_button{
+	color: #767676;
+	border: 5px #767676;
+}
+.rborder{
+	border-radius: 5px;
+}
+
+</style>

@@ -5,7 +5,7 @@ function myfunc1(){
 	while(s.hasChildNodes()){
 	s.removeChild(s.firstChild);
 	}
-	if(document.getElementById("country").value.localeCompare("India")==0){
+	if(document.getElementById("country").value.localeCompare("India")===0){
 	
 		var a=["","Andhra Pradesh","Andaman and Nicobar Islands","Arunachal Pradesh","Assam","Bihar","Chandigarh","Chhattisgarh","Dadra and Nagar Havel","Daman and Diu","Delhi – National Capital Territory","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu & Kashmir","Jharkhand","Karnataka","Kerala","Lakshadweep","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Pondicherry","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"];
 	
